@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BD5FE00271F89A4000C1360 /* CleanApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BD5FDFF271F89A4000C1360 /* CleanApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BD5FE21271F8A44000C1360 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD5FE20271F8A44000C1360 /* AddAccount.swift */; };
+		9BD5FE23271F8ADF000C1360 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD5FE22271F8ADF000C1360 /* AccountModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9BD5FDFC271F89A4000C1360 /* CleanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BD5FDFF271F89A4000C1360 /* CleanApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CleanApp.h; sourceTree = "<group>"; };
+		9BD5FE19271F8A39000C1360 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD5FE20271F8A44000C1360 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
+		9BD5FE22271F8ADF000C1360 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9BD5FDF9271F89A4000C1360 /* Frameworks */ = {
+		9BD5FE16271F8A39000C1360 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,7 +31,7 @@
 		9BD5FDF2271F89A4000C1360 = {
 			isa = PBXGroup;
 			children = (
-				9BD5FDFE271F89A4000C1360 /* CleanApp */,
+				9BD5FE1A271F8A39000C1360 /* Domain */,
 				9BD5FDFD271F89A4000C1360 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -37,49 +39,49 @@
 		9BD5FDFD271F89A4000C1360 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9BD5FDFC271F89A4000C1360 /* CleanApp.framework */,
+				9BD5FE19271F8A39000C1360 /* Domain.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BD5FDFE271F89A4000C1360 /* CleanApp */ = {
+		9BD5FE1A271F8A39000C1360 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				9BD5FDFF271F89A4000C1360 /* CleanApp.h */,
+				9BD5FE20271F8A44000C1360 /* AddAccount.swift */,
+				9BD5FE22271F8ADF000C1360 /* AccountModel.swift */,
 			);
-			path = CleanApp;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9BD5FDF7271F89A4000C1360 /* Headers */ = {
+		9BD5FE14271F8A39000C1360 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD5FE00271F89A4000C1360 /* CleanApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9BD5FDFB271F89A4000C1360 /* CleanApp */ = {
+		9BD5FE18271F8A39000C1360 /* Domain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BD5FE03271F89A4000C1360 /* Build configuration list for PBXNativeTarget "CleanApp" */;
+			buildConfigurationList = 9BD5FE1D271F8A39000C1360 /* Build configuration list for PBXNativeTarget "Domain" */;
 			buildPhases = (
-				9BD5FDF7271F89A4000C1360 /* Headers */,
-				9BD5FDF8271F89A4000C1360 /* Sources */,
-				9BD5FDF9271F89A4000C1360 /* Frameworks */,
-				9BD5FDFA271F89A4000C1360 /* Resources */,
+				9BD5FE14271F8A39000C1360 /* Headers */,
+				9BD5FE15271F8A39000C1360 /* Sources */,
+				9BD5FE16271F8A39000C1360 /* Frameworks */,
+				9BD5FE17271F8A39000C1360 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CleanApp;
-			productName = CleanApp;
-			productReference = 9BD5FDFC271F89A4000C1360 /* CleanApp.framework */;
+			name = Domain;
+			productName = Domain;
+			productReference = 9BD5FE19271F8A39000C1360 /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -91,8 +93,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					9BD5FDFB271F89A4000C1360 = {
+					9BD5FE18271F8A39000C1360 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -109,13 +112,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9BD5FDFB271F89A4000C1360 /* CleanApp */,
+				9BD5FE18271F8A39000C1360 /* Domain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9BD5FDFA271F89A4000C1360 /* Resources */ = {
+		9BD5FE17271F8A39000C1360 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,10 +128,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9BD5FDF8271F89A4000C1360 /* Sources */ = {
+		9BD5FE15271F8A39000C1360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD5FE21271F8A44000C1360 /* AddAccount.swift in Sources */,
+				9BD5FE23271F8ADF000C1360 /* AccountModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +262,10 @@
 			};
 			name = Release;
 		};
-		9BD5FE04271F89A4000C1360 /* Debug */ = {
+		9BD5FE1E271F8A39000C1360 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -276,18 +282,20 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.gabrieljesus.CleanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.gabrieljesus.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9BD5FE05271F89A4000C1360 /* Release */ = {
+		9BD5FE1F271F8A39000C1360 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -304,7 +312,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.gabrieljesus.CleanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.gabrieljesus.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -325,11 +333,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BD5FE03271F89A4000C1360 /* Build configuration list for PBXNativeTarget "CleanApp" */ = {
+		9BD5FE1D271F8A39000C1360 /* Build configuration list for PBXNativeTarget "Domain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BD5FE04271F89A4000C1360 /* Debug */,
-				9BD5FE05271F89A4000C1360 /* Release */,
+				9BD5FE1E271F8A39000C1360 /* Debug */,
+				9BD5FE1F271F8A39000C1360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
