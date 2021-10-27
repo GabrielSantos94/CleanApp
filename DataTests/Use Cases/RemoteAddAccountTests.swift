@@ -14,7 +14,7 @@ class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_httpClient_with_correct_url() {
         
         let addAccountModel = makeAddAccountModel()
-        let url = URL(string: "blabla.com")!
+        let url = makeURL()
         
         let (sut, httpPostClientSpy) = makeSUT(url: url)
         sut.add(addAccountModel: addAccountModel) { _ in }
@@ -91,14 +91,14 @@ class RemoteAddAccountTests: XCTestCase {
             expection.fulfill()
         }
         
-        httpPostClientSpy.completeWithData(Data("invalid_data".utf8))
+        httpPostClientSpy.completeWithData(makeInvalidData())
         wait(for: [expection], timeout: 1)
     }
     
     func test_add_should_not_complete_with_error_if_sut_is_null() {
         
         let httpPostClientSpy = HttpPostClientSpy()
-        var sut: RemoteAddAccount? = RemoteAddAccount(url: URL(string: "blabla.com")!, httpClient: httpPostClientSpy)
+        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeURL(), httpClient: httpPostClientSpy)
         var result: Result<AccountModel, DomainError>?
         
         sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
@@ -110,43 +110,17 @@ class RemoteAddAccountTests: XCTestCase {
 
 extension RemoteAddAccountTests {
     
-    func makeSUT(url: URL = URL(string: "blabla.com")!) -> (sut: RemoteAddAccount, httpPostClientSpy: HttpPostClientSpy) {
+    func makeSUT(url: URL = makeURL()) -> (sut: RemoteAddAccount, httpPostClientSpy: HttpPostClientSpy) {
         
         let httpPostClientSpy = HttpPostClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpPostClientSpy)
-        addTeardownBlock { [weak sut] in
-            XCTAssertNil(sut)
-        }
+        checkMemoryLeak(for: sut)
+        checkMemoryLeak(for: httpPostClientSpy)
         
         return (sut, httpPostClientSpy)
     }
     
     func makeAddAccountModel() -> AddAccountModel {
         return AddAccountModel(name: "", email: "", password: "", passwordConfirmation: "")
-    }
-    
-    func makeAccountModel() -> AccountModel {
-        return AccountModel(id: "", name: "", email: "", password: "")
-    }
-    
-    class HttpPostClientSpy: HttpPostClient {
-        
-        var urls: [URL] = []
-        var data: Data?
-        var completion: ((Result<Data, HttpError>) -> Void)?
-        
-        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void) {
-            self.urls.append(url)
-            self.data = data
-            self.completion = completion
-        }
-        
-        func completeWithError(_ error: HttpError) {
-            self.completion?(.failure(error))
-        }
-        
-        func completeWithData(_ data: Data) {
-            self.completion?(.success(data))
-        }
     }
 }
