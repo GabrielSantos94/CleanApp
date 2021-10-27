@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AccountModel: Encodable {
+public struct AccountModel: Encodable, Equatable {
     public var id: String
     public var name: String
     public var email: String
