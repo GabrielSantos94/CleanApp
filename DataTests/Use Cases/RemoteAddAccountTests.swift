@@ -102,6 +102,9 @@ extension RemoteAddAccountTests {
         
         let httpPostClientSpy = HttpPostClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpPostClientSpy)
+        addTeardownBlock { [weak sut] in
+            XCTAssertNil(sut)
+        }
         
         return (sut, httpPostClientSpy)
     }
