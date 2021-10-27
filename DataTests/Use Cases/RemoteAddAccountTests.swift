@@ -94,6 +94,18 @@ class RemoteAddAccountTests: XCTestCase {
         httpPostClientSpy.completeWithData(Data("invalid_data".utf8))
         wait(for: [expection], timeout: 1)
     }
+    
+    func test_add_should_not_complete_with_error_if_sut_is_null() {
+        
+        let httpPostClientSpy = HttpPostClientSpy()
+        var sut: RemoteAddAccount? = RemoteAddAccount(url: URL(string: "blabla.com")!, httpClient: httpPostClientSpy)
+        var result: Result<AccountModel, DomainError>?
+        
+        sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
+        sut = nil
+        httpPostClientSpy.completeWithError(.noConnectivity)
+        XCTAssertNil(result)
+    }
 }
 
 extension RemoteAddAccountTests {
