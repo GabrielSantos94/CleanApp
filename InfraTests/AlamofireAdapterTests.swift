@@ -46,27 +46,14 @@ class AlamofireAdapterTests: XCTestCase {
         }
     }
     
-    func test_post_should_make_request_with_no_data() throws {
+    func test_post_should_make_request_with_no_data() {
         testRequestFor(data: nil) { request in
             XCTAssertNil(request.httpBodyStream)
         }
     }
     
-    func test_post_should_complete_with_error_when_request_completes_with_error() throws {
-        let sut = makeSut()
-        URLProtocolStub.simulate(data: nil, response: nil, error: makeError())
-        
-        let exp = expectation(description: "waiting")
-        sut.post(to: makeURL(), with: makeValidData()) { result in
-            switch result {
-            case .failure(let error):
-                XCTAssertEqual(error, .noConnectivity)
-            case .success:
-                XCTFail("Should return an error but gor \(result) instead.")
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1)
+    func test_post_should_complete_with_error_when_request_completes_with_error() {
+        expect(expectedResult: .failure(.noConnectivity), when: (data: nil, response: nil, error: makeError()))
     }
 }
 
@@ -90,6 +77,28 @@ extension AlamofireAdapterTests {
         URLProtocolStub.observeRequest { request = $0 }
         wait(for: [exp], timeout: 1)
         action(request!)
+    }
+    
+    func expect(expectedResult: Result<Data, HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?)) {
+        
+        let (data, response, error) = stub
+        
+        let sut = makeSut()
+        URLProtocolStub.simulate(data: data, response: response, error: error)
+        
+        let exp = expectation(description: "waiting")
+        sut.post(to: makeURL(), with: makeValidData()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.success(let expectedSuccess), .success(let receivedSuccess)):
+                XCTAssertEqual(expectedSuccess, receivedSuccess)
+            case (.failure(let expectedError), .failure(let receivedError)):
+                XCTAssertEqual(expectedError, receivedError)
+            default:
+                XCTFail("Expected \(expectedResult) but we got \(receivedResult) instead")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
     }
 }
 
