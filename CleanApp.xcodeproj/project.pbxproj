@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9B07884A273B29C00021D5DF /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B078842273B29C00021D5DF /* Infra.framework */; };
 		9B07884F273B29C00021D5DF /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07884E273B29C00021D5DF /* AlamofireAdapterTests.swift */; };
-		9B078850273B29C00021D5DF /* Infra.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B078844273B29C00021D5DF /* Infra.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B078857273B2AC40021D5DF /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE29271F8CA0000C1360 /* Data.framework */; platformFilter = ios; };
 		9B078858273B2AC40021D5DF /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE29271F8CA0000C1360 /* Data.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B07885C273B2AE20021D5DF /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C5E2729D0AF0056EEF9 /* TestExtension.swift */; };
@@ -24,6 +23,8 @@
 		9B6E2C612729D17E0056EEF9 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C602729D17E0056EEF9 /* TestFactories.swift */; };
 		9B6E2C642729D2570056EEF9 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C632729D2570056EEF9 /* HttpClientSpy.swift */; };
 		9B6E2C662729D2BD0056EEF9 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C652729D2BD0056EEF9 /* AccountModelFactory.swift */; };
+		9B96590B274C5AE700D4E833 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96590A274C5AE700D4E833 /* AlamofireAdapter.swift */; };
+		9BBBCB56274C5C8500043D52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9BBBCB55274C5C8500043D52 /* Alamofire */; };
 		9BD5FE21271F8A44000C1360 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD5FE20271F8A44000C1360 /* AddAccount.swift */; };
 		9BD5FE23271F8ADF000C1360 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD5FE22271F8ADF000C1360 /* AccountModel.swift */; };
 		9BD5FE31271F8CA0000C1360 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE29271F8CA0000C1360 /* Data.framework */; };
@@ -91,7 +92,6 @@
 
 /* Begin PBXFileReference section */
 		9B078842273B29C00021D5DF /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B078844273B29C00021D5DF /* Infra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infra.h; sourceTree = "<group>"; };
 		9B078849273B29C00021D5DF /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07884E273B29C00021D5DF /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		9B1F51562728C7D900494CAF /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 		9B6E2C602729D17E0056EEF9 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		9B6E2C632729D2570056EEF9 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		9B6E2C652729D2BD0056EEF9 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
+		9B96590A274C5AE700D4E833 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		9BD5FE19271F8A39000C1360 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD5FE20271F8A44000C1360 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		9BD5FE22271F8ADF000C1360 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B078857273B2AC40021D5DF /* Data.framework in Frameworks */,
+				9BBBCB56274C5C8500043D52 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +161,7 @@
 		9B078843273B29C00021D5DF /* Infra */ = {
 			isa = PBXGroup;
 			children = (
-				9B078844273B29C00021D5DF /* Infra.h */,
+				9BBBCB57274C5CF100043D52 /* Http */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -248,6 +250,14 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
+		9BBBCB57274C5CF100043D52 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				9B96590A274C5AE700D4E833 /* AlamofireAdapter.swift */,
+			);
+			name = Http;
+			sourceTree = "<group>";
+		};
 		9BD5FDF2271F89A4000C1360 = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +327,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B078850273B29C00021D5DF /* Infra.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +363,9 @@
 				9B07885A273B2AC40021D5DF /* PBXTargetDependency */,
 			);
 			name = Infra;
+			packageProductDependencies = (
+				9BBBCB55274C5C8500043D52 /* Alamofire */,
+			);
 			productName = Infra;
 			productReference = 9B078842273B29C00021D5DF /* Infra.framework */;
 			productType = "com.apple.product-type.framework";
@@ -449,6 +461,7 @@
 				TargetAttributes = {
 					9B078841273B29C00021D5DF = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					9B078848273B29C00021D5DF = {
 						CreatedOnToolsVersion = 13.1;
@@ -534,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B96590B274C5AE700D4E833 /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +625,7 @@
 		9B078851273B29C00021D5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -631,6 +646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -639,6 +655,7 @@
 		9B078852273B29C00021D5DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -667,6 +684,7 @@
 		9B078853273B29C00021D5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S7U8TZ84C4;
@@ -688,6 +706,7 @@
 		9B078854273B29C00021D5DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S7U8TZ84C4;
@@ -1066,6 +1085,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		9B078862273B34840021D5DF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B078861273B34840021D5DF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9BBBCB55274C5C8500043D52 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9B078861273B34840021D5DF /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
