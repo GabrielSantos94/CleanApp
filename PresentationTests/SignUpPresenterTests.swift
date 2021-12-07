@@ -44,9 +44,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_name_not_provided() {
         
-        let alertViewSpy = AlertViewSpy()
+        let (sut, alertViewSpy) = makeSut()
         
-        let sut = SignupPresenter(alertView: alertViewSpy)
         let viewModelViewModel = SignUpViewModel(email: "bla", password: "bla", passwordConfirmation: "bla")
         sut.signUp(viewModel: viewModelViewModel)
         
@@ -55,6 +54,13 @@ class SignUpPresenterTests: XCTestCase {
 }
 
 extension SignUpPresenterTests {
+    
+    func makeSut() -> (sut: SignupPresenter, alertViewSpy: AlertViewSpy) {
+        let alertViewSpy = AlertViewSpy()
+        let sut = SignupPresenter(alertView: alertViewSpy)
+        
+        return (sut, alertViewSpy)
+    }
     
     class AlertViewSpy: AlertView {
         
