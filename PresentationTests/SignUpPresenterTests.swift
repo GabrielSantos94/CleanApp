@@ -20,6 +20,8 @@ class SignupPresenter {
         
         if viewModel.name == nil || viewModel.name!.isEmpty {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: "Campo nome Obrigatório"))
+        } else if viewModel.email == nil || viewModel.email!.isEmpty {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: "Campo email Obrigatório"))
         }
     }
 }
@@ -50,6 +52,16 @@ class SignUpPresenterTests: XCTestCase {
         sut.signUp(viewModel: viewModelViewModel)
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Campo nome Obrigatório"))
+    }
+    
+    func test_signup_should_show_error_message_if_email_not_provided() {
+        
+        let (sut, alertViewSpy) = makeSut()
+        
+        let viewModelViewModel = SignUpViewModel(name: "bla", password: "bla", passwordConfirmation: "bla")
+        sut.signUp(viewModel: viewModelViewModel)
+        
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Campo email Obrigatório"))
     }
 }
 
