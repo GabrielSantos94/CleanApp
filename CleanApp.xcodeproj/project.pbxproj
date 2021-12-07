@@ -27,6 +27,7 @@
 		9B8652C8275EFC3A00B5DFD4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE19271F8A39000C1360 /* Domain.framework */; };
 		9B8652C9275EFC3A00B5DFD4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE19271F8A39000C1360 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B8652CF275EFCB200B5DFD4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8652CE275EFCB200B5DFD4 /* AlertView.swift */; };
+		9B8652D3275F03BD00B5DFD4 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8652D2275F03BD00B5DFD4 /* EmailValidator.swift */; };
 		9B91D018275EE24400089142 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91D010275EE24400089142 /* Presentation.framework */; };
 		9B91D01D275EE24400089142 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91D01C275EE24400089142 /* SignUpPresenterTests.swift */; };
 		9B96590B274C5AE700D4E833 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96590A274C5AE700D4E833 /* AlamofireAdapter.swift */; };
@@ -148,6 +149,7 @@
 		9B6E2C652729D2BD0056EEF9 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		9B8652C6275EFBBF00B5DFD4 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		9B8652CE275EFCB200B5DFD4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		9B8652D2275F03BD00B5DFD4 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		9B91D010275EE24400089142 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D017275EE24400089142 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D01C275EE24400089142 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
@@ -343,9 +345,18 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+		9B8652D1275F03B200B5DFD4 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				9B8652D2275F03BD00B5DFD4 /* EmailValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		9B91D011275EE24400089142 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9B8652D1275F03B200B5DFD4 /* Validators */,
 				9B8652CD275EFCA800B5DFD4 /* Views */,
 				9B8652D0275EFCD200B5DFD4 /* Presenters */,
 			);
@@ -798,6 +809,7 @@
 			files = (
 				9B8652C7275EFBBF00B5DFD4 /* SignupPresenter.swift in Sources */,
 				9B8652CF275EFCB200B5DFD4 /* AlertView.swift in Sources */,
+				9B8652D3275F03BD00B5DFD4 /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
