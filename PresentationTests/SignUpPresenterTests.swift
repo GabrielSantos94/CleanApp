@@ -55,7 +55,7 @@ class SignUpPresenterTests: XCTestCase {
         
         let (sut, alertViewSpy) = makeSut()
         
-        let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", password: "bla", passwordConfirmation: "bla")
+        let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", password: "blabla", passwordConfirmation: "bla")
         sut.signUp(viewModel: viewModelViewModel)
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Erro ao confirmar senha"))
