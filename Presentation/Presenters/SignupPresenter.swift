@@ -22,7 +22,6 @@ public final class SignupPresenter {
         if let message = validade(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         }
-        
     }
     
     private func validade(viewModel: SignUpViewModel) -> String? {
@@ -36,9 +35,9 @@ public final class SignupPresenter {
             return "Campo senha de confirmação obrigatório"
         } else if viewModel.password != viewModel.passwordConfirmation {
             return "Erro ao confirmar senha"
+        } else if !emailValidator.isValid(email: viewModel.email!) {
+            return "Email inválido"
         }
-        
-        _ = emailValidator.isValid(email: viewModel.email!)
         return nil
     }
 }
