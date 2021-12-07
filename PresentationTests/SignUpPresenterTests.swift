@@ -18,15 +18,22 @@ class SignupPresenter {
     
     func signUp(viewModel: SignUpViewModel) {
         
-        if viewModel.name == nil || viewModel.name!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: "Campo nome obrigatório"))
-        } else if viewModel.email == nil || viewModel.email!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: "Campo email obrigatório"))
-        } else if viewModel.password == nil || viewModel.password!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: "Campo senha obrigatório"))
-        } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: "Campo senha de confirmação obrigatório"))
+        if let message = validade(viewModel: viewModel) {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         }
+    }
+    
+    private func validade(viewModel: SignUpViewModel) -> String? {
+        if viewModel.name == nil || viewModel.name!.isEmpty {
+            return "Campo nome obrigatório"
+        } else if viewModel.email == nil || viewModel.email!.isEmpty {
+            return "Campo email obrigatório"
+        } else if viewModel.password == nil || viewModel.password!.isEmpty {
+            return "Campo senha obrigatório"
+        } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
+            return "Campo senha de confirmação obrigatório"
+        }
+        return nil
     }
 }
 
