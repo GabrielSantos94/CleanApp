@@ -33,7 +33,15 @@ public final class SignupPresenter {
             
             let addAccountModel = AddAccountModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
             
-            addAccount.add(addAccountModel: addAccountModel) { _ in }
+            addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
+                
+                switch result {
+                case .success(let account):
+                    break
+                case .failure:
+                    self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Algo inesperado aconteceu, tente novamente."))
+                }
+            }
         }
     }
     
