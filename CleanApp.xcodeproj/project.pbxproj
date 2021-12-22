@@ -499,8 +499,7 @@
 		9BA8C4172773A3AA008AF50E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9BA8C4302773A77A008AF50E /* SignUpViewController.swift */,
-				9BA8C4322773A7C0008AF50E /* SignUpViewController.storyboard */,
+				9BA8C4362773B729008AF50E /* Scenes */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -508,9 +507,42 @@
 		9BA8C4212773A3AB008AF50E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				9BA8C4222773A3AB008AF50E /* SignUpViewControllerTests.swift */,
+				9BA8C4372773B734008AF50E /* Scenes */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		9BA8C4342773B6E9008AF50E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9BA8C4302773A77A008AF50E /* SignUpViewController.swift */,
+				9BA8C4322773A7C0008AF50E /* SignUpViewController.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9BA8C4352773B6F6008AF50E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9BA8C4222773A3AB008AF50E /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9BA8C4362773B729008AF50E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9BA8C4342773B6E9008AF50E /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9BA8C4372773B734008AF50E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9BA8C4352773B6F6008AF50E /* SignUp */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		9BBBCB57274C5CF100043D52 /* Http */ = {
