@@ -16,8 +16,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         
-        let viewModelViewModel = SignUpViewModel(email: "bla", password: "bla", passwordConfirmation: "bla")
-        sut.signUp(viewModel: viewModelViewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(name: nil))
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Campo nome obrigatório"))
     }
@@ -27,8 +26,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         
-        let viewModelViewModel = SignUpViewModel(name: "bla", password: "bla", passwordConfirmation: "bla")
-        sut.signUp(viewModel: viewModelViewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(email: nil))
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Campo email obrigatório"))
     }
@@ -38,8 +36,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         
-        let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", passwordConfirmation: "bla")
-        sut.signUp(viewModel: viewModelViewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(password: nil))
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Campo senha obrigatório"))
     }
@@ -49,8 +46,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         
-        let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", password: "bla")
-        sut.signUp(viewModel: viewModelViewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: nil))
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Campo senha de confirmação obrigatório"))
     }
@@ -60,8 +56,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         
-        let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", password: "blabla", passwordConfirmation: "bla")
-        sut.signUp(viewModel: viewModelViewModel)
+        sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: "bla"))
         
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "Erro ao confirmar senha"))
     }
@@ -71,12 +66,7 @@ class SignUpPresenterTests: XCTestCase {
         let emailValidatorSpy = EmailValidatorSpy()
         let sut = makeSut(emailValidator: emailValidatorSpy)
         
-        let signUpViewModel = SignUpViewModel(
-            name: "gabriel",
-            email: "invalid_email@mail.com",
-            password: "bla123",
-            passwordConfirmation: "bla123"
-        )
+        let signUpViewModel = makeSignUpViewModel()
         sut.signUp(viewModel: signUpViewModel)
         
         XCTAssertEqual(emailValidatorSpy.email, signUpViewModel.email)
@@ -88,12 +78,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
         
-        let signUpViewModel = SignUpViewModel(
-            name: "gabriel",
-            email: "invalid_email@mail.com",
-            password: "bla123",
-            passwordConfirmation: "bla123"
-        )
+        let signUpViewModel = makeSignUpViewModel()
         emailValidatorSpy.isValid = false
         
         sut.signUp(viewModel: signUpViewModel)
@@ -103,6 +88,16 @@ class SignUpPresenterTests: XCTestCase {
 }
 
 extension SignUpPresenterTests {
+    
+    func makeSignUpViewModel(
+        name: String? = "gabriel",
+        email: String? = "invalid_email@mail.com",
+        password: String? = "bla123",
+        passwordConfirmation: String? = "bla123"
+    ) -> SignUpViewModel {
+        
+        return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+    }
     
     func makeSut(
         alertView: AlertViewSpy = AlertViewSpy(),
