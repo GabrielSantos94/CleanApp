@@ -7,7 +7,6 @@
 
 import XCTest
 import UIKit
-import Presentation
 
 @testable import UI
 
@@ -22,15 +21,4 @@ class SignUpViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.loadingIndicator?.isAnimating, false)
     }
 
-}
-
-extension SignUpViewController: LoadingView {
-    
-    public func display(viewModel: LoadingViewModel) {
-        if viewModel.isLoading {
-            loadingIndicator.startAnimating()
-        } else {
-            loadingIndicator.stopAnimating()
-        }
-    }
 }
