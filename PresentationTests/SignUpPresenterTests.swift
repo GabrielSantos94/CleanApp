@@ -13,7 +13,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_name_is_not_provided() {
         
-        let (sut, alertViewSpy, _) = makeSut()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy)
         
         let viewModelViewModel = SignUpViewModel(email: "bla", password: "bla", passwordConfirmation: "bla")
         sut.signUp(viewModel: viewModelViewModel)
@@ -23,7 +24,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_email_is_not_provided() {
         
-        let (sut, alertViewSpy, _) = makeSut()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy)
         
         let viewModelViewModel = SignUpViewModel(name: "bla", password: "bla", passwordConfirmation: "bla")
         sut.signUp(viewModel: viewModelViewModel)
@@ -33,7 +35,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_password_is_not_provided() {
         
-        let (sut, alertViewSpy, _) = makeSut()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy)
         
         let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", passwordConfirmation: "bla")
         sut.signUp(viewModel: viewModelViewModel)
@@ -43,7 +46,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_password_confirmation_is_not_provided() {
         
-        let (sut, alertViewSpy, _) = makeSut()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy)
         
         let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", password: "bla")
         sut.signUp(viewModel: viewModelViewModel)
@@ -53,7 +57,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_password_confirmation_not_match() {
         
-        let (sut, alertViewSpy, _) = makeSut()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy)
         
         let viewModelViewModel = SignUpViewModel(name: "bla", email: "bla", password: "blabla", passwordConfirmation: "bla")
         sut.signUp(viewModel: viewModelViewModel)
@@ -63,7 +68,8 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_call_email_validator_with_correct_email() {
         
-        let (sut, _,emailValidatorSpy) = makeSut()
+        let emailValidatorSpy = EmailValidatorSpy()
+        let sut = makeSut(emailValidator: emailValidatorSpy)
         
         let signUpViewModel = SignUpViewModel(
             name: "gabriel",
@@ -78,7 +84,9 @@ class SignUpPresenterTests: XCTestCase {
     
     func test_signup_should_show_error_message_if_invalid_email_is_provided() {
         
-        let (sut, alertViewSpy, emailValidatorSpy) = makeSut()
+        let emailValidatorSpy = EmailValidatorSpy()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
         
         let signUpViewModel = SignUpViewModel(
             name: "gabriel",
@@ -96,14 +104,14 @@ class SignUpPresenterTests: XCTestCase {
 
 extension SignUpPresenterTests {
     
-    func makeSut() -> (sut: SignupPresenter, alertViewSpy: AlertViewSpy, emailValidatorSpy: EmailValidatorSpy) {
-        let alertViewSpy = AlertViewSpy()
-        let emailValidatorSpy = EmailValidatorSpy()
-        
-        let sut = SignupPresenter(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
-        
-        return (sut, alertViewSpy, emailValidatorSpy)
-    }
+    func makeSut(
+        alertView: AlertViewSpy = AlertViewSpy(),
+        emailValidator: EmailValidatorSpy = EmailValidatorSpy()) -> SignupPresenter {
+            
+            let sut = SignupPresenter(alertView: alertView, emailValidator: emailValidator)
+            
+            return sut
+        }
     
     class AlertViewSpy: AlertView {
         

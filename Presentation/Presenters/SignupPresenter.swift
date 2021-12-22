@@ -18,7 +18,6 @@ public final class SignupPresenter {
     }
     
     public func signUp(viewModel: SignUpViewModel) {
-        
         if let message = validade(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         }
