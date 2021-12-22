@@ -119,8 +119,4 @@ extension RemoteAddAccountTests {
         
         return (sut, httpPostClientSpy)
     }
-    
-    func makeAddAccountModel() -> AddAccountModel {
-        return AddAccountModel(name: "", email: "", password: "", passwordConfirmation: "")
-    }
 }
