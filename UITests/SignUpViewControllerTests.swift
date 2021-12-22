@@ -23,6 +23,11 @@ class SignUpViewControllerTests: XCTestCase {
         let sut = makeStoryboard()
         XCTAssertNotNil(sut as LoadingView)
     }
+    
+    func test_sut_implements_alertView() {
+        let sut = makeStoryboard()
+        XCTAssertNotNil(sut as AlertView)
+    }
 }
 
 extension SignUpViewControllerTests {
