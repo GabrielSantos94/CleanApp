@@ -47,7 +47,7 @@
 		9B55D05A2774DED400102FBD /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0592774DED400102FBD /* WeakVarProxy.swift */; };
 		9B55D05C2774DF2B00102FBD /* AlertViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D05B2774DF2B00102FBD /* AlertViewProxy.swift */; };
 		9B55D05E2774DF4400102FBD /* LoadingViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D05D2774DF4400102FBD /* LoadingViewProxy.swift */; };
-		9B55D0632774F7B700102FBD /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0622774F7B700102FBD /* Enviroment.swift */; };
+		9B55D0632774F7B700102FBD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0622774F7B700102FBD /* Environment.swift */; };
 		9B6E2C5F2729D0AF0056EEF9 /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C5E2729D0AF0056EEF9 /* TestExtension.swift */; };
 		9B6E2C612729D17E0056EEF9 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C602729D17E0056EEF9 /* TestFactories.swift */; };
 		9B6E2C642729D2570056EEF9 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C632729D2570056EEF9 /* HttpClientSpy.swift */; };
@@ -333,7 +333,7 @@
 		9B55D05D2774DF4400102FBD /* LoadingViewProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewProxy.swift; sourceTree = "<group>"; };
 		9B55D0602774F67100102FBD /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9B55D0612774F74E00102FBD /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		9B55D0622774F7B700102FBD /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		9B55D0622774F7B700102FBD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		9B6E2C5E2729D0AF0056EEF9 /* TestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtension.swift; sourceTree = "<group>"; };
 		9B6E2C602729D17E0056EEF9 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		9B6E2C632729D2570056EEF9 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
@@ -645,7 +645,7 @@
 			children = (
 				9B55D0602774F67100102FBD /* Debug.xcconfig */,
 				9B55D0612774F74E00102FBD /* Release.xcconfig */,
-				9B55D0622774F7B700102FBD /* Enviroment.swift */,
+				9B55D0622774F7B700102FBD /* Environment.swift */,
 			);
 			path = Env;
 			sourceTree = "<group>";
@@ -1537,7 +1537,7 @@
 			files = (
 				9B55D0502774D6F200102FBD /* UseCaseFactory.swift in Sources */,
 				9B55D0042774C87100102FBD /* AppDelegate.swift in Sources */,
-				9B55D0632774F7B700102FBD /* Enviroment.swift in Sources */,
+				9B55D0632774F7B700102FBD /* Environment.swift in Sources */,
 				9B55D0062774C87100102FBD /* SceneDelegate.swift in Sources */,
 				9B55D05E2774DF4400102FBD /* LoadingViewProxy.swift in Sources */,
 				9B55D05A2774DED400102FBD /* WeakVarProxy.swift in Sources */,

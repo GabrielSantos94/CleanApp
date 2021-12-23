@@ -13,7 +13,7 @@ import Infra
 final class UseCaseFactory {
     
     private static let httpClient = AlamofireAdapter()
-    private static let apiBaseURL = Enviroment.variable(key: .apiBaseURL)
+    private static let apiBaseURL = Environment.variable(key: .apiBaseURL)
     
     private static func makeURL(path: String) -> URL {
         return URL(string: "\(apiBaseURL)/\(path)")!
