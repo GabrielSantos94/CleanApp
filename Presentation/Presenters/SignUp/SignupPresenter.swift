@@ -34,7 +34,7 @@ public final class SignupPresenter {
             addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
                 
                 switch result {
-                case .success(let account):
+                case .success:
                     self?.alertView.showMessage(viewModel: .init(title: "Sucesso", message: "Conta criada com sucesso."))
                 case .failure:
                     self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Algo inesperado aconteceu, tente novamente."))
