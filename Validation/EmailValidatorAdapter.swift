@@ -17,4 +17,6 @@ public final class EmailValidatorAdapter: EmailValidator {
         
         return regex.firstMatch(in: email, options: [], range: range) != nil
     }
+    
+    public init() { }
 }
