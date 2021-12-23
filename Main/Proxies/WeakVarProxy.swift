@@ -8,7 +8,7 @@
 import Foundation
 
 final class WeakVarProxy<T: AnyObject> {
-    private weak var instance: T?
+    public weak var instance: T?
     
     init(_ instance: T) {
         self.instance = instance
