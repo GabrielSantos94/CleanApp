@@ -6,11 +6,26 @@
 //
 
 import Foundation
-import Domain
 import UI
+import Presentation
+import Validation
+import Data
+import Infra
+import Domain
 
 public final class SignUpComposer {
     static func composeController(with addAccount: AddAccount) -> SignUpViewController {
-        return ControllerFactory.makeSignUp(addAccount: addAccount)
+        let controller = SignUpViewController.instantiate()
+        let emailValidatorAdapter = EmailValidatorAdapter()
+        let presenter = SignupPresenter(
+            alertView: WeakVarProxy(controller),
+            emailValidator: emailValidatorAdapter,
+            addAccount: addAccount,
+            loadingView: WeakVarProxy(controller)
+        )
+        
+        controller.signUp = presenter.signUp
+        
+        return controller
     }
 }
