@@ -84,6 +84,7 @@
 		9BBBCB5A274C5D7000043D52 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBBCB59274C5D7000043D52 /* URLProtocolStub.swift */; };
 		9BC040B52773D54D008E4EF3 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC040B42773D54D008E4EF3 /* EmailValidatorAdapter.swift */; };
 		9BC13F2C277A3D4A003A0178 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8C40F27739535008AF50E /* TestFactories.swift */; };
+		9BC13F2F277A4296003A0178 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC13F2E277A4296003A0178 /* MainQueueDispatchDecorator.swift */; };
 		9BD5FE21271F8A44000C1360 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD5FE20271F8A44000C1360 /* AddAccount.swift */; };
 		9BD5FE23271F8ADF000C1360 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD5FE22271F8ADF000C1360 /* AccountModel.swift */; };
 		9BD5FE31271F8CA0000C1360 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE29271F8CA0000C1360 /* Data.framework */; };
@@ -367,6 +368,7 @@
 		9BA8C4512773D130008AF50E /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
 		9BBBCB59274C5D7000043D52 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		9BC040B42773D54D008E4EF3 /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
+		9BC13F2E277A4296003A0178 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		9BD5FE19271F8A39000C1360 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD5FE20271F8A44000C1360 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		9BD5FE22271F8ADF000C1360 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -585,6 +587,7 @@
 		9B55D0022774C87100102FBD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9BC13F2D277A428D003A0178 /* Decorators */,
 				9B55D05F2774F66300102FBD /* Env */,
 				9B55D0582774DEC500102FBD /* Proxies */,
 				9B55D0512774D75D00102FBD /* Composers */,
@@ -874,6 +877,14 @@
 				9B55D0542774D8DE00102FBD /* SignUpComposerTests.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		9BC13F2D277A428D003A0178 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				9BC13F2E277A4296003A0178 /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		9BD5FDF2271F89A4000C1360 = {
@@ -1545,6 +1556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B55D0502774D6F200102FBD /* UseCaseFactory.swift in Sources */,
+				9BC13F2F277A4296003A0178 /* MainQueueDispatchDecorator.swift in Sources */,
 				9B55D0042774C87100102FBD /* AppDelegate.swift in Sources */,
 				9B55D0632774F7B700102FBD /* Environment.swift in Sources */,
 				9B55D0062774C87100102FBD /* SceneDelegate.swift in Sources */,
