@@ -6,9 +6,9 @@
 //
 
 import XCTest
+import Validation
 
 @testable import Main
-
 
 class SignUpComposerTests: XCTestCase {
 
@@ -27,5 +27,47 @@ class SignUpComposerTests: XCTestCase {
         wait(for: [exp], timeout: 1)
         
         checkMemoryLeak(for: sut)
+    }
+    
+    func test_signUp_compose_with_correct_validations() {
+        let validations = SignUpComposer.makeValidations()
+        
+        XCTAssertEqual(
+            validations[0] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "name", fieldLabel: "Nome")
+        )
+        
+        XCTAssertEqual(
+            validations[1] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "email", fieldLabel: "Email")
+        )
+        
+        XCTAssertEqual(
+            validations[2] as! EmailValidation,
+            EmailValidation(
+                fieldName: "email",
+                fieldLabel: "Email",
+                emailValidator: EmailValidatorSpy()
+            )
+        )
+        
+        XCTAssertEqual(
+            validations[3] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "password", fieldLabel: "Senha")
+        )
+        
+        XCTAssertEqual(
+            validations[4] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha")
+        )
+        
+        XCTAssertEqual(
+            validations[5] as! CompareFieldsValidation,
+            CompareFieldsValidation(
+                fieldName: "password",
+                fieldNameToCompare: "passwordConfirmation",
+                fieldLabel: "Confirmar Senha"
+            )
+        )
     }
 }

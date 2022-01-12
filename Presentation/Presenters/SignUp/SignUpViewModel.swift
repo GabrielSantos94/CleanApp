@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Domain
 
-public struct SignUpViewModel: Equatable {
+public struct SignUpViewModel: Model, Equatable {
     public var name: String?
     public var email: String?
     public var password: String?

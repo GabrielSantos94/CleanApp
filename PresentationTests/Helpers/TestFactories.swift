@@ -16,14 +16,6 @@ func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
     return AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é inválido.")
 }
 
-func makeErrorAlertViewModel(message: String) -> AlertViewModel {
-    return AlertViewModel(title: "Error", message: message)
-}
-
-func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
-    return AlertViewModel(title: "Sucesso", message: message)
-}
-
 func makeSignUpViewModel(name: String? = "gabriel", email: String? = "invalid_email@mail.com", password: String? = "bla123", passwordConfirmation: String? = "bla123") -> SignUpViewModel {
     return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
 }

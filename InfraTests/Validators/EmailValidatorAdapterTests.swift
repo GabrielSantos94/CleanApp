@@ -6,7 +6,8 @@
 //
 
 import XCTest
-@testable import Validation
+
+@testable import Infra
 
 class EmailValidatorAdapterTests: XCTestCase {
 
