@@ -107,7 +107,6 @@
 		9BF285102782CA8B00F164AA /* ValidationCompositTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2850F2782CA8B00F164AA /* ValidationCompositTests.swift */; };
 		9BF285122782CE6300F164AA /* ValidationComposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF285112782CE6300F164AA /* ValidationComposit.swift */; };
 		9BF285152782CEB200F164AA /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF285142782CEB200F164AA /* ValidationSpy.swift */; };
-		9BFAF7A2274DA8C100A5401B /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF7A1274DA8C100A5401B /* AddAccountIntegrationTests.swift */; };
 		9BFAF7A3274DA8C100A5401B /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE29271F8CA0000C1360 /* Data.framework */; };
 		9BFAF7A9274DA8E000A5401B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE19271F8A39000C1360 /* Domain.framework */; };
 		9BFAF7AA274DA8E000A5401B /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B078842273B29C00021D5DF /* Infra.framework */; };
@@ -1814,7 +1813,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFAF7A2274DA8C100A5401B /* AddAccountIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
