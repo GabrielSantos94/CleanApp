@@ -14,7 +14,7 @@ class SignUpComposerTests: XCTestCase {
 
     func test_background_request_should_complete_on_main_thread() {
         let addAccountSpy = AddAccountSpy()
-        let sut = SignUpComposer.composeController(with: MainQueueDispatchDecorator(addAccountSpy))
+        let sut = makeSignupController(with: MainQueueDispatchDecorator(addAccountSpy))
         sut.loadViewIfNeeded()
         sut.signUp?(makeSignUpViewModel())
         
@@ -30,7 +30,7 @@ class SignUpComposerTests: XCTestCase {
     }
     
     func test_signUp_compose_with_correct_validations() {
-        let validations = SignUpComposer.makeValidations()
+        let validations = makeSignupValidations()
         
         XCTAssertEqual(
             validations[0] as! RequiredFieldValidation,
