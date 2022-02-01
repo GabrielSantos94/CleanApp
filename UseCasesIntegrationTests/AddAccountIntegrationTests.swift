@@ -11,17 +11,15 @@ import Infra
 import Domain
 
 class AddAccountIntegrationTests: XCTestCase {
-
-    // I scaped this test because the api is out
     
-    func scaping_test_add_account() {
+    func test_add_account() {
         let alamofireAdapter = AlamofireAdapter()
         let url = URL(string: "https://fordevs.com/api/signup")!
         let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
         
         let addAccountModel = AddAccountModel(
             name: "Gabriel",
-            email: "santos.gabrieljesus@outlook.com",
+            email: "\(UUID().uuidString)@gmail.com",
             password: "secret",
             passwordConfirmation: "secret"
         )
@@ -37,5 +35,17 @@ class AddAccountIntegrationTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 5)
+        
+        let exp2 = expectation(description: "waiting")
+        sut.add(addAccountModel: addAccountModel) { result in
+            switch result {
+            case .failure(let error) where error == .emailInUse:
+                XCTAssertNotNil(error)
+            default:
+                XCTFail("Expect to return success, got \(result) instead")
+            }
+            exp2.fulfill()
+        }
+        wait(for: [exp2], timeout: 5)
     }
 }
