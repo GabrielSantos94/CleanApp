@@ -36,8 +36,14 @@ public final class SignupPresenter {
                 switch result {
                 case .success:
                     self?.alertView.showMessage(viewModel: .init(title: "Sucesso", message: "Conta criada com sucesso."))
-                case .failure:
-                    self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Algo inesperado aconteceu, tente novamente."))
+                case .failure(let error):
+                    
+                    switch error {
+                    case .emailInUse:
+                        self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Esse email já esta em uso."))
+                    default:
+                        self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Algo inesperado aconteceu, tente novamente."))
+                    }
                 }
                 self?.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
