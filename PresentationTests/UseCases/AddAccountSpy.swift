@@ -10,9 +10,9 @@ import Domain
 
 class AddAccountSpy: AddAccount {
     var addAccountModel: AddAccountModel?
-    var completion: ((Result<AccountModel, DomainError>) -> Void)?
+    var completion: ((AddAccount.AddAccountResult) -> Void)?
     
-    func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+    func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.AddAccountResult) -> Void) {
         self.addAccountModel = addAccountModel
         self.completion = completion
     }
