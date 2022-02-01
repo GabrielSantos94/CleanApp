@@ -85,22 +85,6 @@ class SignUpPresenterTests: XCTestCase {
         
         XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
     }
-    
-    func test_signup_should_show_error_message_if_validation_fails() {
-        let validationSpy = ValidationSpy()
-        let alertViewSpy = AlertViewSpy()
-        
-        let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observer { viewModel in
-            XCTAssertEqual(viewModel, AlertViewModel(title: "Falha na validação", message: "Erro"))
-            exp.fulfill()
-        }
-        validationSpy.simulateError()
-        sut.signUp(viewModel: makeSignUpViewModel())
-        wait(for: [exp], timeout: 1)
-    }
 }
 
 extension SignUpPresenterTests {
