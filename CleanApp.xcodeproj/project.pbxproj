@@ -41,6 +41,7 @@
 		9B36869D278E4F6B0025DAB0 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8C40F27739535008AF50E /* TestFactories.swift */; };
 		9B36869E278E4F730025DAB0 /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E2C5E2729D0AF0056EEF9 /* TestExtension.swift */; };
 		9B36869F278E51530025DAB0 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8C407277392F5008AF50E /* EmailValidatorSpy.swift */; };
+		9B48DF5C27AB4E2E00F055F1 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DF5B27AB4E2E00F055F1 /* Authentication.swift */; };
 		9B55D0042774C87100102FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0032774C87100102FBD /* AppDelegate.swift */; };
 		9B55D0062774C87100102FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0052774C87100102FBD /* SceneDelegate.swift */; };
 		9B55D00D2774C87400102FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B55D00C2774C87400102FBD /* Assets.xcassets */; };
@@ -359,6 +360,7 @@
 		9B31922F27AA14F60053CD9B /* RoundedTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextfield.swift; sourceTree = "<group>"; };
 		9B368692278E4DEE0025DAB0 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B368694278E4DEE0025DAB0 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
+		9B48DF5B27AB4E2E00F055F1 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		9B55D0012774C87100102FBD /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B55D0032774C87100102FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B55D0052774C87100102FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD5FE20271F8A44000C1360 /* AddAccount.swift */,
+				9B48DF5B27AB4E2E00F055F1 /* Authentication.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -1842,6 +1845,7 @@
 				9B30FBCE2727864600D6EB5A /* Model.swift in Sources */,
 				9BD5FE21271F8A44000C1360 /* AddAccount.swift in Sources */,
 				9B1F51572728C7D900494CAF /* DomainError.swift in Sources */,
+				9B48DF5C27AB4E2E00F055F1 /* Authentication.swift in Sources */,
 				9BD5FE23271F8ADF000C1360 /* AccountModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
