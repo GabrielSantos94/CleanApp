@@ -20,3 +20,10 @@ func makeAddAccountModel() -> AddAccountModel {
         passwordConfirmation: "bla123"
     )
 }
+
+func makeAuthenticationModel() -> AuthenticationModel {
+    return AuthenticationModel(
+        email: "invalid_email@mail.com",
+        password: "bla123"
+    )
+}
