@@ -102,8 +102,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="sTk-nI-QUD" id="DhJ-I5-5Qt"/>
                         <outlet property="loadingIndicator" destination="T7R-eG-SHH" id="mMv-KJ-Z4u"/>
                         <outlet property="loginButton" destination="HK6-Aw-wLr" id="GJe-hp-otb"/>
+                        <outlet property="passwordTextField" destination="0OR-m8-GE5" id="dnu-kJ-4vB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
