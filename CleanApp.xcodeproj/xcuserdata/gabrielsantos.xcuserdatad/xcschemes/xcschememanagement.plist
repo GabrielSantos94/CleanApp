@@ -42,7 +42,7 @@
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>UseCasesIntegrationTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -83,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>9B91D00F275EE24400089142</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9BA8C4152773A3AA008AF50E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

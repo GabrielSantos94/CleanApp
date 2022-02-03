@@ -49,6 +49,8 @@
 		9B48DF6827AB5FAC00F055F1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DF6727AB5FAC00F055F1 /* LoginPresenter.swift */; };
 		9B48DF6B27AB644100F055F1 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DF6A27AB644100F055F1 /* AuthenticationSpy.swift */; };
 		9B48DF6E27AB79DC00F055F1 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B48DF6D27AB79DC00F055F1 /* LoginViewController.storyboard */; };
+		9B48DF7127AB7AD400F055F1 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DF7027AB7AD400F055F1 /* LoginViewControllerTests.swift */; };
+		9B48DF7327AB7B2F00F055F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DF7227AB7B2F00F055F1 /* LoginViewController.swift */; };
 		9B55D0042774C87100102FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0032774C87100102FBD /* AppDelegate.swift */; };
 		9B55D0062774C87100102FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D0052774C87100102FBD /* SceneDelegate.swift */; };
 		9B55D00D2774C87400102FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B55D00C2774C87400102FBD /* Assets.xcassets */; };
@@ -375,6 +377,8 @@
 		9B48DF6727AB5FAC00F055F1 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		9B48DF6A27AB644100F055F1 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		9B48DF6D27AB79DC00F055F1 /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		9B48DF7027AB7AD400F055F1 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		9B48DF7227AB7B2F00F055F1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B55D0012774C87100102FBD /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B55D0032774C87100102FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B55D0052774C87100102FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -743,6 +747,15 @@
 			isa = PBXGroup;
 			children = (
 				9B48DF6D27AB79DC00F055F1 /* LoginViewController.storyboard */,
+				9B48DF7227AB7B2F00F055F1 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9B48DF6F27AB7AC700F055F1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9B48DF7027AB7AD400F055F1 /* LoginViewControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -977,6 +990,7 @@
 		9BA8C4372773B734008AF50E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9B48DF6F27AB7AC700F055F1 /* Login */,
 				9BA8C4352773B6F6008AF50E /* SignUp */,
 			);
 			path = Scenes;
@@ -1847,6 +1861,7 @@
 				9B31922A27AA11000053CD9B /* NavigationController.swift in Sources */,
 				9BA8C4312773A77A008AF50E /* SignUpViewController.swift in Sources */,
 				9BA8C43F2773C153008AF50E /* Storyboarded.swift in Sources */,
+				9B48DF7327AB7B2F00F055F1 /* LoginViewController.swift in Sources */,
 				9B31923027AA14F60053CD9B /* RoundedTextfield.swift in Sources */,
 				9B31922C27AA13260053CD9B /* UIColor+Extension.swift in Sources */,
 				9B31922E27AA14390053CD9B /* Color.swift in Sources */,
@@ -1857,6 +1872,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B48DF7127AB7AD400F055F1 /* LoginViewControllerTests.swift in Sources */,
 				9BA8C4232773A3AB008AF50E /* SignUpViewControllerTests.swift in Sources */,
 				9BA8C43A2773B77B008AF50E /* Test+Extensions.swift in Sources */,
 			);

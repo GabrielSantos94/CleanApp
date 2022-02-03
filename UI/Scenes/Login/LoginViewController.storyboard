@@ -10,7 +10,7 @@
         <!--Login-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" userLabel="Login" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" userLabel="Login" customClass="LoginViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,10 +102,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="sTk-nI-QUD" id="oyI-s4-SzL"/>
-                        <outlet property="loadingIndicator" destination="T7R-eG-SHH" id="l4p-cD-Vtk"/>
-                        <outlet property="passwordTextField" destination="0OR-m8-GE5" id="Xpg-e1-i3L"/>
-                        <outlet property="saveButton" destination="HK6-Aw-wLr" id="SMM-oW-Ao9"/>
+                        <outlet property="loadingIndicator" destination="T7R-eG-SHH" id="mMv-KJ-Z4u"/>
+                        <outlet property="loginButton" destination="HK6-Aw-wLr" id="GJe-hp-otb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
