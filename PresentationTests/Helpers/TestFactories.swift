@@ -19,3 +19,7 @@ func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
 func makeSignUpViewModel(name: String? = "gabriel", email: String? = "invalid_email@mail.com", password: String? = "bla123", passwordConfirmation: String? = "bla123") -> SignUpViewModel {
     return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
 }
+
+func makeLoginViewModel(email: String? = "invalid_email@mail.com", password: String? = "bla123") -> LoginViewModel {
+    return LoginViewModel(email: email, password: password)
+}
