@@ -24,7 +24,21 @@ public final class LoginPresenter {
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         } else {
-            authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { _ in }
+            authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { [weak self] result in
+                
+                switch result {
+                case .success:
+                    self?.alertView.showMessage(viewModel: .init(title: "Sucesso", message: "Conta criada com sucesso."))
+                case .failure(let error):
+                    switch error {
+                    case .emailInUse:
+                        self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Esse email já esta em uso."))
+                    default:
+                        self?.alertView.showMessage(viewModel: .init(title: "Error", message: "Algo inesperado aconteceu, tente novamente."))
+                    }
+                }
+//                self?.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
+            }
         }
     }
 }
