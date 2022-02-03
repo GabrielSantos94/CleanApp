@@ -119,7 +119,7 @@ class RemoteAddAccountTests: XCTestCase {
         
         let httpPostClientSpy = HttpPostClientSpy()
         var sut: RemoteAddAccount? = RemoteAddAccount(url: makeURL(), httpClient: httpPostClientSpy)
-        var result: AddAccount.AddAccountResult?
+        var result: AddAccount.Result?
         
         sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
         sut = nil
