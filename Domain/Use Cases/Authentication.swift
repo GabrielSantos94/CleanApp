@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol Authentication {
-    typealias Result = Swift.Result<AccountModel, DomainError>
+    typealias Result = Swift.Result<AuthenticationModel, DomainError>
     
     func add(authenticationModel: AuthenticationModel, completion: @escaping (Result) -> Void)
 }

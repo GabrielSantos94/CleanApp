@@ -23,8 +23,12 @@ public final class RemoteAuthentication {
             guard self != nil else { return }
             
             switch result {
-            case .success:
-                break
+            case .success(let data):
+                if let model: AuthenticationModel = data?.toModel() {
+                    completion(.success(model))
+                } else {
+                    completion(.failure(.unexpected))
+                }
             case .failure(let error):
                 switch error {
                 case .unauthorized:
