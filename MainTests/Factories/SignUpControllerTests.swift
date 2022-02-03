@@ -1,5 +1,5 @@
 //
-//  SignUpComposerTests.swift
+//  SignUpControllerTests.swift
 //  MainTests
 //
 //  Created by Gabriel Santos on 23/12/21.
@@ -10,7 +10,7 @@ import Validation
 
 @testable import Main
 
-class SignUpComposerTests: XCTestCase {
+class SignUpControllerTests: XCTestCase {
 
     func test_background_request_should_complete_on_main_thread() {
         let addAccountSpy = AddAccountSpy()
