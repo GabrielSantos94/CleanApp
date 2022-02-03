@@ -22,7 +22,7 @@ class AuthenticationSpy: Authentication {
         completion?(.failure(error))
     }
     
-    func completionWithAccount(_ authentication: AuthenticationModel) {
+    func completionWithAuthentication(_ authentication: AuthenticationModel) {
         completion?(.success(authentication))
     }
 }
