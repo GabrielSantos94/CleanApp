@@ -16,10 +16,10 @@ func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
     return AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é inválido.")
 }
 
-func makeSignUpViewModel(name: String? = "gabriel", email: String? = "invalid_email@mail.com", password: String? = "bla123", passwordConfirmation: String? = "bla123") -> SignUpViewModel {
-    return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+func makeSignUpViewModel(name: String? = "gabriel", email: String? = "invalid_email@mail.com", password: String? = "bla123", passwordConfirmation: String? = "bla123") -> SignUpRequest {
+    return SignUpRequest(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
 }
 
-func makeLoginViewModel(email: String? = "invalid_email@mail.com", password: String? = "bla123") -> LoginViewModel {
-    return LoginViewModel(email: email, password: password)
+func makeLoginViewModel(email: String? = "invalid_email@mail.com", password: String? = "bla123") -> LoginRequest {
+    return LoginRequest(email: email, password: password)
 }

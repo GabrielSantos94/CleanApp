@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  LoginRequest.swift
 //  Presentation
 //
 //  Created by Gabriel Santos on 22/12/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-public struct LoginViewModel: Model, Equatable {
+public struct LoginRequest: Model, Equatable {
     public var email: String?
     public var password: String?
     
