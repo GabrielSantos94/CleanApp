@@ -86,6 +86,7 @@
 		9B8652C8275EFC3A00B5DFD4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE19271F8A39000C1360 /* Domain.framework */; };
 		9B8652C9275EFC3A00B5DFD4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE19271F8A39000C1360 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B8652CF275EFCB200B5DFD4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8652CE275EFCB200B5DFD4 /* AlertView.swift */; };
+		9B89C79E27B3350200908F84 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C79D27B3350200908F84 /* WelcomeRouterTests.swift */; };
 		9B91D018275EE24400089142 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91D010275EE24400089142 /* Presentation.framework */; };
 		9B91D01D275EE24400089142 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91D01C275EE24400089142 /* SignUpPresenterTests.swift */; };
 		9B94B33727AB81880089BE9F /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94B33627AB81880089BE9F /* LoginControllerTests.swift */; };
@@ -414,6 +415,7 @@
 		9B8652C6275EFBBF00B5DFD4 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		9B8652CE275EFCB200B5DFD4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		9B8652D2275F03BD00B5DFD4 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		9B89C79D27B3350200908F84 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		9B91D010275EE24400089142 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D017275EE24400089142 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D01C275EE24400089142 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
@@ -652,6 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				9B11ACB027B2F25600741251 /* WelcomeViewControllerTests.swift */,
+				9B89C79D27B3350200908F84 /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1913,6 +1916,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B89C79E27B3350200908F84 /* WelcomeRouterTests.swift in Sources */,
 				9B48DF7127AB7AD400F055F1 /* LoginViewControllerTests.swift in Sources */,
 				9BA8C4232773A3AB008AF50E /* SignUpViewControllerTests.swift in Sources */,
 				9B11ACB127B2F25600741251 /* WelcomeViewControllerTests.swift in Sources */,
