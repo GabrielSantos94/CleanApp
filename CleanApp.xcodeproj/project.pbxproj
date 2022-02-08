@@ -87,6 +87,7 @@
 		9B8652C9275EFC3A00B5DFD4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5FE19271F8A39000C1360 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B8652CF275EFCB200B5DFD4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8652CE275EFCB200B5DFD4 /* AlertView.swift */; };
 		9B89C79E27B3350200908F84 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C79D27B3350200908F84 /* WelcomeRouterTests.swift */; };
+		9B89C7A027B3395700908F84 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C79F27B3395700908F84 /* WelcomeRouter.swift */; };
 		9B91D018275EE24400089142 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91D010275EE24400089142 /* Presentation.framework */; };
 		9B91D01D275EE24400089142 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91D01C275EE24400089142 /* SignUpPresenterTests.swift */; };
 		9B94B33727AB81880089BE9F /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94B33627AB81880089BE9F /* LoginControllerTests.swift */; };
@@ -416,6 +417,7 @@
 		9B8652CE275EFCB200B5DFD4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		9B8652D2275F03BD00B5DFD4 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		9B89C79D27B3350200908F84 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
+		9B89C79F27B3395700908F84 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		9B91D010275EE24400089142 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D017275EE24400089142 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D01C275EE24400089142 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 			children = (
 				9B11ACB227B2F39300741251 /* WelcomeViewController.swift */,
 				9B11ACAD27B2F0BF00741251 /* WelcomeViewController.storyboard */,
+				9B89C79F27B3395700908F84 /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1903,6 +1906,7 @@
 				9B11ACB327B2F39300741251 /* WelcomeViewController.swift in Sources */,
 				9BA8C43D2773BFDA008AF50E /* UIViewController+Extensions.swift in Sources */,
 				9B31922A27AA11000053CD9B /* NavigationController.swift in Sources */,
+				9B89C7A027B3395700908F84 /* WelcomeRouter.swift in Sources */,
 				9BA8C4312773A77A008AF50E /* SignUpViewController.swift in Sources */,
 				9BA8C43F2773C153008AF50E /* Storyboarded.swift in Sources */,
 				9B48DF7327AB7B2F00F055F1 /* LoginViewController.swift in Sources */,
