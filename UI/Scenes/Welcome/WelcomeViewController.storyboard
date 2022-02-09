@@ -74,7 +74,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.59996974469999997" green="0.1858371496" blue="0.42354428770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ENTRAR">
+                                <buttonConfiguration key="configuration" style="plain" title="CRIAR CONTA">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 </buttonConfiguration>
                             </button>
