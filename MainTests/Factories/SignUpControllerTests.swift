@@ -57,15 +57,10 @@ class SignUpControllerTests: XCTestCase {
         )
         
         XCTAssertEqual(
-            validations[4] as! RequiredFieldValidation,
-            RequiredFieldValidation(fieldName: "passwordConfirmation", fieldLabel: "Confirmar Senha")
-        )
-        
-        XCTAssertEqual(
-            validations[5] as! CompareFieldsValidation,
+            validations[4] as! CompareFieldsValidation,
             CompareFieldsValidation(
-                fieldName: "password",
-                fieldNameToCompare: "passwordConfirmation",
+                fieldName: "passwordConfirmation",
+                fieldNameToCompare: "password",
                 fieldLabel: "Confirmar Senha"
             )
         )

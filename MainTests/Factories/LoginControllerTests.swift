@@ -10,13 +10,12 @@ import Validation
 import UI
 
 @testable import Main
-@testable import PresentationTests
 
 class LoginControllerTests: XCTestCase {
 
     func test_background_request_should_complete_on_main_thread() {
         let authenticationSpy = AuthenticationSpy()
-        let sut = makeLoginController(authentication: MainQueueDispatchDecorator(authenticationSpy))
+        let sut = makeLoginControllerWith(authentication: MainQueueDispatchDecorator(authenticationSpy))
         
         sut.loadViewIfNeeded()
         sut.login?(makeLoginViewModel())
@@ -56,7 +55,7 @@ extension LoginControllerTests {
     func makeSut() -> (sut: LoginViewController, authenticationSpy: AuthenticationSpy) {
         
         let authenticationSpy = AuthenticationSpy()
-        let sut = makeLoginController(authentication: authenticationSpy)
+        let sut = makeLoginControllerWith(authentication: authenticationSpy)
         
         return (sut, authenticationSpy)
     }
