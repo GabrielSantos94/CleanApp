@@ -12,7 +12,11 @@ import Validation
 import Data
 import Domain
 
-public func makeSignupController(with addAccount: AddAccount) -> SignUpViewController {
+public func makeSignupController() -> SignUpViewController {
+    return makeSignupControllerWith(addAccount: makeRemoteAddAccount())
+}
+
+public func makeSignupControllerWith(addAccount: AddAccount) -> SignUpViewController {
     let controller = SignUpViewController.instantiate()
     let validationComposite = ValidationComposit(validations: makeSignupValidations())
     

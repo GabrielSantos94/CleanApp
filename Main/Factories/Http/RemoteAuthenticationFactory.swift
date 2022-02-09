@@ -9,6 +9,10 @@ import Foundation
 import Domain
 import Data
 
+func makeRemoteAuthentication() -> Authentication {
+    return makeRemoteAuthentication(httpClient: makeAlamofireAdapter())
+}
+
 func makeRemoteAuthentication(httpClient: HttpPostClient) -> Authentication {
     let remoteAuthentication = RemoteAuthentication(url: makeURL(path: "login"), httpClient: httpClient)
     return MainQueueDispatchDecorator(remoteAuthentication)
