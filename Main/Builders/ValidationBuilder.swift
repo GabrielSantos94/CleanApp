@@ -47,7 +47,7 @@ public final class ValidationBuilder {
     public func asSameAs(_ fieldNameToCompare: String) -> ValidationBuilder {
         validations.append(CompareFieldsValidation(
             fieldName: fieldName,
-            fieldNameToCompare: fieldLabel,
+            fieldNameToCompare: fieldNameToCompare,
             fieldLabel: fieldLabel
         ))
         return self
