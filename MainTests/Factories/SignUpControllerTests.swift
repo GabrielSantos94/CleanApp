@@ -14,7 +14,7 @@ class SignUpControllerTests: XCTestCase {
 
     func test_background_request_should_complete_on_main_thread() {
         let addAccountSpy = AddAccountSpy()
-        let sut = makeSignupController(with: MainQueueDispatchDecorator(addAccountSpy))
+        let sut = makeSignupControllerWith(addAccount: MainQueueDispatchDecorator(addAccountSpy))
         sut.loadViewIfNeeded()
         sut.signUp?(makeSignUpViewModel())
         
